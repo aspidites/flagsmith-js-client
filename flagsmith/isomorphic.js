@@ -2814,10 +2814,10 @@
           }
 
           a.updateEventStorage();
-        }), t(this, "featureEnabled", function () {
-          var p = a.flags && a.flags[key.toLowerCase().replace(/ /g, "_")],
-              e = !1;
-          return p && (e = p.enabled), a.evaluateFlag(key), e;
+        }), t(this, "featureEnabled", function (p) {
+          var e = a.flags && a.flags[p.toLowerCase().replace(/ /g, "_")],
+              d = !1;
+          return e && (d = e.enabled), a.evaluateFlag(p), d;
         }), t(this, "getValue", function (p) {
           var e = a.flags && a.flags[p.toLowerCase().replace(/ /g, "_")],
               d = null;
