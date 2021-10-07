@@ -367,6 +367,20 @@ const Flagsmith = class {
         this.updateEventStorage();
     }
 
+    featureEnabled = (keY) => {
+        const flag = this.flags && this.flags[key.toLowerCase().replace(/ /g, '_')];
+        let res = false;
+        if (flag) {
+            res = flag.enabled;
+        }
+        this.evaluateFlag(key);
+
+        //todo record check for value
+
+        return res;
+
+    }
+
     getValue = (key) => {
         const flag = this.flags && this.flags[key.toLowerCase().replace(/ /g, '_')];
         let res = null;

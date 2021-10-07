@@ -83,9 +83,14 @@ declare class IFlagsmith {
     stopListening:()=> void
 
     /**
-     * Get the whether a flag is enabled e.g. flagsmith.hasFeature("powerUserFeature")
+     * Get the whether a flag is defined e.g. flagsmith.hasFeature("powerUserFeature")
      */
     hasFeature:(key: string)=> boolean
+
+    /**
+     * Get the whether a flag is enabled e.g. flagsmith.featureEnabled("font_size")
+     */
+    featureEnabled:(key: string) => string|number|boolean
 
     /**
      * Get the value of a particular remote config e.g. flagsmith.getValue("font_size")
