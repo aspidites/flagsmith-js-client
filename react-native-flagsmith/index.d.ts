@@ -82,7 +82,7 @@ declare class IFlagsmith {
     stopListening:()=> void
 
     /**
-     * Get the whether a flag is enabled e.g. flagsmith.hasFeature("powerUserFeature")
+     * Get the whether a flag is defined e.g. flagsmith.hasFeature("powerUserFeature")
      */
     hasFeature:(key: string)=> boolean
 
