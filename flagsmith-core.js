@@ -367,7 +367,7 @@ const Flagsmith = class {
         this.updateEventStorage();
     }
 
-    featureEnabled = (keY) => {
+    featureEnabled = (key) => {
         const flag = this.flags && this.flags[key.toLowerCase().replace(/ /g, '_')];
         let res = false;
         if (flag) {
