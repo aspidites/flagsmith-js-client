@@ -38,7 +38,7 @@ declare class IFlagsmith {
         AsyncStorage?: any // an AsyncStorage implementation
         cacheFlags?: boolean // whether to local storage flags, needs AsyncStorage defined
         preventFetch?: boolean // whether to prevent fetching flags on init
-        enableAnalytics?: boolean // Enable sending flag analytics for getValue and hasFeature evaluations.
+        enableAnalytics?: boolean // Enable sending flag analytics for getValue, featureEnabled and hasFeature evaluations.
         enableLogs?: boolean // whether to enable logs
         onChange?: (previousFlags:IFlags, params:IRetrieveInfo)=> void // triggered when the flags are retrieved
         state?: IState // set a predefined state, useful for isomorphic applications
@@ -85,6 +85,11 @@ declare class IFlagsmith {
      * Get the whether a flag is enabled e.g. flagsmith.hasFeature("powerUserFeature")
      */
     hasFeature:(key: string)=> boolean
+
+    /**
+     * Get the whether a flag is enabled e.g. flagsmith.featureEnabled("font_size")
+     */
+    featureEnabled:(key: string) => boolean
 
     /**
      * Get the value of a particular remote config e.g. flagsmith.getValue("font_size")

@@ -87,6 +87,11 @@ declare class IFlagsmith {
     hasFeature:(key: string)=> boolean
 
     /**
+     * Get the whether a flag is enabled e.g. flagsmith.featureEnabled("font_size")
+     */
+    featureEnabled:(key: string) => boolean
+
+    /**
      * Get the value of a particular remote config e.g. flagsmith.getValue("font_size")
      */
     getValue:(key: string) => string|number|boolean
